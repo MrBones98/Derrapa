@@ -39,7 +39,7 @@ public class CarController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _sphereFollow.AddForce(_currentMovement * 1000f);
+        _sphereFollow.AddForce(_currentMovement* 1000f);
         print(_currentMovement);
     }
 
@@ -61,7 +61,8 @@ public class CarController : MonoBehaviour
             speed = (_playerInputManager.AccelerateInput  ? _backAccelerationRange: 1f); // is it inputing accelration? then the range applied, if not : 1f speed
         }
         //remove the movement y as direct input for the car lmao marico raro
-        Vector3 inputDirection = new Vector3(_playerInputManager.MoveInput.x,0f, _playerInputManager.MoveInput.y);
+        //Vector3 inputDirection = new Vector3(_playerInputManager.MoveInput.x,0f, _playerInputManager.MoveInput.y);
+        Vector3 inputDirection = new Vector3(0f,0f, _playerInputManager.MoveInput.y);
         //Vector3 worldDireciton = transform.TransformDirection(inputDirection);
         print(_playerInputManager.MoveInput);
 

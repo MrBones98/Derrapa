@@ -206,11 +206,11 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23620169, y: -0, z: -0, w: 0.97170407}
-  m_LocalPosition: {x: 0, y: 3.7, z: -7.85}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 1.85, z: -2.275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 371382798}
+  m_Father: {fileID: 561287161}
   m_LocalEulerAnglesHint: {x: 27.325, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 371382801}
   - component: {fileID: 371382800}
   - component: {fileID: 371382799}
-  - component: {fileID: 371382803}
   m_Layer: 0
   m_Name: FollowSphere
   m_TagString: Untagged
@@ -285,14 +284,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371382797}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.30023178, z: -0, w: 0.9538663}
   m_LocalPosition: {x: 0, y: 0, z: 1.65}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 330585546}
+  m_Children: []
   m_Father: {fileID: 561287161}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -34.943, z: 0}
 --- !u!54 &371382799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -394,25 +392,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371382797}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &371382803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371382797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8387caeb139dc9340bc83e005b02b1b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _backingSpeed: 1.5
-  _maxSpeed: 50
-  _turnStrenght: 180
-  _accelerationRange: 8
-  _backAccelerationRange: 4
-  _sphereFollow: {fileID: 371382799}
-  _carVisual: {fileID: 1948130701}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 561287161}
+  - component: {fileID: 561287162}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -565,8 +545,28 @@ Transform:
   m_Children:
   - {fileID: 1948130702}
   - {fileID: 371382798}
+  - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561287162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561287159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8387caeb139dc9340bc83e005b02b1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _backingSpeed: 1.5
+  _maxSpeed: 50
+  _turnStrenght: 180
+  _accelerationRange: 8
+  _backAccelerationRange: 4
+  _sphereFollow: {fileID: 371382799}
+  _carVisual: {fileID: 561287159}
 --- !u!1 &771887065
 GameObject:
   m_ObjectHideFlags: 0
